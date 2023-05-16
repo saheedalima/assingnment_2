@@ -9,6 +9,7 @@ class Registration_Stateful extends StatefulWidget {
 class _Registration_StatefulState extends State<Registration_Stateful> {
   var formkey = GlobalKey<FormState>();
   var confirmpwd;
+  bool showpwd=true;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class _Registration_StatefulState extends State<Registration_Stateful> {
           TextFormField(
             validator: (email) {
               if (email!.isEmpty || !email.contains('@')) {
-                return "email must have '@";
+                return "email must have @";
               } else {
                 return null;
               }
@@ -63,11 +64,17 @@ class _Registration_StatefulState extends State<Registration_Stateful> {
                 return null;
               }
             },
-            decoration: const InputDecoration(
+            decoration:  InputDecoration(
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(50))),
               prefixIcon: Icon(Icons.password),
-              suffixIcon: Icon(Icons.visibility),
+              suffixIcon: IconButton(onPressed: (){
+                if(showpwd){
+                  showpwd=false;
+                }else{
+                  showpwd=true;
+                }
+              }, icon: Icon(showpwd==true?Icons.visibility:Icons.visibility_off)),
               hintText: "enter your password",
               helperText: "password must be in letters",
               labelText: "password",
@@ -83,10 +90,17 @@ class _Registration_StatefulState extends State<Registration_Stateful> {
                 return null;
               }
             },
-            decoration: const InputDecoration(
+            decoration:  InputDecoration(
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(50))),
-              prefixIcon: Icon(Icons.email),
+              prefixIcon: Icon(Icons.password),
+              suffixIcon: IconButton(onPressed: (){
+                if(showpwd){
+                  showpwd=false;
+                }else{
+                  showpwd=true;
+                }
+              }, icon: Icon(showpwd==true?Icons.visibility:Icons.visibility_off)),
               hintText: "enter your confirmpassword",
               helperText: "confirmpassword must be in letters",
               labelText: "confirmpassword",

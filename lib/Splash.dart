@@ -1,8 +1,8 @@
-
 import 'dart:async';
 
-import 'package:assingnment_2/LoginPage_Stateful.dart';
-import 'package:assingnment_2/Registratin_Stateful.dart';
+import 'package:assingnment_2/Contacts_Page.dart';
+import 'package:assingnment_2/List_With_separator.dart';
+import 'package:assingnment_2/LogoPage_login.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +27,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Timer(Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Registration_Stateful() ));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => List_With_separator()));
     });
     super.initState();
   }
