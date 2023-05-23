@@ -10,12 +10,29 @@ class List_with_builder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Contacts"),),
+      appBar: AppBar(title: Text("Contacts"),
+        actions: [
+          Icon(Icons.camera_alt),
+          SizedBox(width: 20,),
+          Icon(Icons.search)
+        ],
+      ),
       body:
           ListView.builder(itemBuilder: (context, i){
+            Stack(
+              children: [
+                Image.asset("assets/icons/flutter_icon.png"),
+                Icon(Icons.add),
+              ],
+            );
            return Card(
               child: ListTile(title: Text(names[i]),
               subtitle: Text("${numbers[i]}"),
+              trailing: Wrap(children: [
+                Icon(Icons.phone),
+                SizedBox(width: 20,),
+                Icon(Icons.message)
+              ],),
               leading: Image.asset(photos[i]),),
             );
           },itemCount: numbers.length,),

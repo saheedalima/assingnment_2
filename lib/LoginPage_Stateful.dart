@@ -13,21 +13,16 @@ class _LoginPage_StatefulState extends State<LoginPage_Stateful> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("LoginPage Stateful"),),
-      body:
-      Container(
-        height: double.infinity,width: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage("assets/icons/background.png",),
-          ),
-        ),
+      appBar: AppBar(title: const Text("LoginPage Stateful"),),
+      body: Center(
         child: Form(
           key: appkey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Login Page",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,
+                const Text("Login Page",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.italic,color: Colors.redAccent,backgroundColor: Colors.white,),),
+                Padding(padding: EdgeInsets.all(20)),
                 TextFormField(
                   validator: (uname){
                     if(uname!.isEmpty || !uname.contains('@')){

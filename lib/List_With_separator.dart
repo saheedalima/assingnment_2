@@ -11,7 +11,6 @@ void main(){
 }
 class List_With_separator extends StatelessWidget {
   var names=["Wazi","Jamshi","Sathar","Reji"];
-  var numbers=[7034858318,1234567890,7559915491,0987654321];
   var colornum=[100,200,300,400];
   var photos=["assets/icons/flutter_icon.png","assets/icons/flutter_icon.png","assets/icons/flutter_icon.png",
     "assets/icons/flutter_icon.png"];
@@ -21,7 +20,6 @@ class List_With_separator extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("WhatsApp"),
         actions: [
-
           PopupMenuButton(itemBuilder: (context){
           return [
             PopupMenuItem(child: Text("Settings"),onTap: (){},),
@@ -31,16 +29,16 @@ class List_With_separator extends StatelessWidget {
           ];
         })],
       ),
-      body: ListView.separated(itemBuilder: (context,int){
+      body:
+      ListView.separated(itemBuilder: (context,int){
         return ListTile(
           title: Text(names[int]),
-          subtitle: Text("${numbers[int]}"),
-          leading: Image.asset(photos[int]),
+          leading: CircleAvatar(backgroundImage: AssetImage("assets/icons/flutter_icon.png"),),
         );
       }, separatorBuilder: (context,int){  //separation of lines
         return Divider(
           thickness: 5,
-          color: Colors.blue,
+          color: Colors.transparent,
         );
       },
           itemCount: names.length),

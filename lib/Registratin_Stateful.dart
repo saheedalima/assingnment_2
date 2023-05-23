@@ -21,6 +21,11 @@ class _Registration_StatefulState extends State<Registration_Stateful> {
           key: formkey,
           child: Column(
         children: [
+          Text("Registration Page",style: TextStyle(
+              fontSize: 30,
+            fontWeight: FontWeight.bold,
+            color: Colors.redAccent,
+          ),),Padding(padding: EdgeInsets.all(20)),
           TextFormField(
             validator: (email) {
               if (email!.isEmpty || !email.contains('@')) {
