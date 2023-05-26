@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:assingnment_2/Contacts_Page.dart';
 import 'package:assingnment_2/GridView_builder.dart';
 import 'package:assingnment_2/GridView_ex.dart';
+import 'package:assingnment_2/Hotel_Details_Ui.dart';
+import 'package:assingnment_2/List_Ui.dart';
 import 'package:assingnment_2/List_With_separator.dart';
 import 'package:assingnment_2/List_with_builder.dart';
 import 'package:assingnment_2/LoginPage_Stateful.dart';
@@ -33,7 +35,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Timer(Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Grid_ex()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Hotel_Details_Ui()));
     });
     super.initState();
   }
@@ -57,14 +59,13 @@ class _SplashState extends State<Splash> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset("assets/icons/Picsart.png",height: 100,width: 100,),
-              const Text("TiVidey",style: TextStyle(
+               Text("TiVidey",style: TextStyle(
                 fontSize: 50,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,color: Colors.white
               ),)
               ],
           ),
         ),
       ),
-
     );
   }
 }
