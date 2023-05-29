@@ -35,7 +35,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Timer(Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Hotel_Details_Ui()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => List_Ui()));
     });
     super.initState();
   }

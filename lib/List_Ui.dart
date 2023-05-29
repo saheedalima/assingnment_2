@@ -10,53 +10,33 @@ class List_Ui extends StatelessWidget {
       body: ListView(
         children: [
           Card(
-              shape: BeveledRectangleBorder(
-      borderRadius: BorderRadius.circular(20),
-    ),
-            color: Colors.orange,
-            child: Row(
-              children: [
-                Container(
-                  width: 200,
-                  decoration:
-                      BoxDecoration(
-                          borderRadius: BorderRadius.circular(50)),
-                  child: Image.asset("assets/icons/img_3.png",fit: BoxFit.fill,),
-
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                Column(
-                  children: const [
-                    Text("Delhi"),
-                    SizedBox(height: 20),
-                    Text("India"),
-                    Text("population : 32.9 billion")
-                  ],
-                )
-              ],
-            ),
-          ),
-          Card(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             color: Colors.orange,
             child: Row(
               children: [
                 Container(
                   decoration:
-                      BoxDecoration(
-                          borderRadius: BorderRadius.circular(20)),
-                  child: Image.asset("assets/icons/img_2.png",fit: BoxFit.fill,),
+                  BoxDecoration(
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Image.asset("assets/icons/img_2.png",fit: BoxFit.fill,),
+                  ),
                   width: 200,
                 ),
                 const SizedBox(
                   width: 20,
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    Text("Finland"),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 20),
+                      child: Text("Finland",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                    ),
                     SizedBox(width: 20,),
-                    Text("Europe"),
+                    Text("Europe",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                     Text("population : 52.9 billion")
                   ],
                 )
@@ -64,13 +44,51 @@ class List_Ui extends StatelessWidget {
             ),
           ),
           Card(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+            color: Colors.orange,
+            child: Row(
+              children: [
+                Container(
+                  decoration:
+                      BoxDecoration(
+                          borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Image.asset("assets/icons/img_3.png",fit: BoxFit.fill,),
+                  ),
+                  width: 200,
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 20),
+                      child: Text("Delhi",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                    ),
+                    SizedBox(width: 20,),
+                    Text("Delhi",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                    Text("population : 52.9 billion")
+                  ],
+                )
+              ],
+            ),
+          ),
+          Card(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             color: Colors.orange,
             child: Row(
               children: [
                 Container(
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                  child: Image.asset("assets/icons/img_2.png",fit: BoxFit.fill,),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Image.asset("assets/icons/img_2.png",fit: BoxFit.fill,),
+                  ),
                   width: 200,
                 ),
                 const SizedBox(
@@ -78,10 +96,12 @@ class List_Ui extends StatelessWidget {
 
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    Text("Vancover"),
+                    Text("Vancover",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
                     SizedBox(height: 20),
-                    Text("Canada"),
+                    Text("Canada",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                     Text("population : 32.9 billion")
                   ],
                 )
@@ -89,13 +109,17 @@ class List_Ui extends StatelessWidget {
             ),
           ),
           Card(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             color: Colors.orange,
             child: Row(
               children: [
                 Container(
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                  child: Image.asset("assets/icons/img_2.png"),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Image.asset("assets/icons/img_2.png"),
+                  ),
                   width: 200,
 
                 ),
@@ -104,10 +128,12 @@ class List_Ui extends StatelessWidget {
 
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    Text("London"),
+                    Text("London",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
                     SizedBox(height: 20),
-                    Text("UK"),
+                    Text("UK",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                     Text("population : 18.9 billion")
                   ],
                 )
@@ -115,14 +141,18 @@ class List_Ui extends StatelessWidget {
             ),
           ),
           Card(
-             color: Colors.orange,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+            color: Colors.orange,
             child: Row(
               children: [
 
                 Container(
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                  child: Image.asset("assets/icons/img_2.png"),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Image.asset("assets/icons/newyork.png"),
+                  ),
                   width: 200,
 
                 ),
@@ -131,10 +161,12 @@ class List_Ui extends StatelessWidget {
 
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    Text("New York"),
+                    Text("New York",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
                     SizedBox(height: 20),
-                    Text("New York"),
+                    Text("New York",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                     Text("population : 18.9 billion")
                   ],
                 )
