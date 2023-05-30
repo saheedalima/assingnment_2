@@ -15,6 +15,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'Profile_Ui_1.dart';
+
 void main(){
   runApp(DevicePreview(
     enabled: !kReleaseMode,
@@ -35,7 +37,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Timer(Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Hotel_Details_Ui()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Profile_Ui_1()));
     });
     super.initState();
   }
