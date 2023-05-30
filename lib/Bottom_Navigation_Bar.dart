@@ -14,7 +14,7 @@ class _BottoNavigatin_BarState extends State<BottoNavigatin_Bar> {
       body: BottomNavigationBar(
           items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.home,),label: "Home",
             )
           ]),
     );
