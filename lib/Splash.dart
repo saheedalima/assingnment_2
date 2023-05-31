@@ -9,6 +9,7 @@ import 'package:assingnment_2/List_With_separator.dart';
 import 'package:assingnment_2/List_with_builder.dart';
 import 'package:assingnment_2/LoginPage_Stateful.dart';
 import 'package:assingnment_2/LogoPage_login.dart';
+import 'package:assingnment_2/Prfile_Ui_2.dart';
 import 'package:assingnment_2/Registratin_Stateful.dart';
 import 'package:assingnment_2/Stag_Grid.dart';
 import 'package:device_preview/device_preview.dart';
@@ -37,7 +38,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Timer(Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Profile_Ui_1()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Profile_Ui_2()));
     });
     super.initState();
   }
