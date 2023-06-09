@@ -17,6 +17,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'Music_Ui.dart';
 import 'Profile_Ui_1.dart';
 
 void main(){
@@ -38,7 +39,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Timer(Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Farmers_Freshzone()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Music_Ui()));
     });
     super.initState();
   }
