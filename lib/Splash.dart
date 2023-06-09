@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:assingnment_2/Contacts_Page.dart';
+import 'package:assingnment_2/Farmers_FreshZhone.dart';
 import 'package:assingnment_2/GridView_builder.dart';
 import 'package:assingnment_2/GridView_ex.dart';
 import 'package:assingnment_2/Hotel_Details_Ui.dart';
@@ -19,8 +20,7 @@ import 'package:flutter/material.dart';
 import 'Profile_Ui_1.dart';
 
 void main(){
-  runApp(DevicePreview(
-    enabled: !kReleaseMode,
+  runApp(DevicePreview(enabled: !kReleaseMode,
     builder: (context) => MaterialApp(
       useInheritedMediaQuery: true, home: Splash(),
     ), // Wrap your app
@@ -38,7 +38,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Timer(Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Profile_Ui_2()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Farmers_Freshzone()));
     });
     super.initState();
   }

@@ -15,9 +15,10 @@ class Grid_ex extends StatelessWidget {
       body: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 10,
-        mainAxisSpacing: 10,),
+        mainAxisSpacing: 10,
+      mainAxisExtent: 80),
         children: List.generate(10, (index) => Container(
-          height: 100,
+          height: 50,
           width: 100,
           decoration: BoxDecoration(
             color: colours[index],

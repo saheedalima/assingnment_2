@@ -9,13 +9,12 @@ class Profile_Ui_2 extends StatelessWidget {
         actions: [
           PopupMenuButton<int>(itemBuilder: (context)=> 
               [
-                PopupMenuItem(child: Text("Popup Menu Button")),
+                const PopupMenuItem(child: Text("Popup Menu Button")),
               ]
           ),
         ],
       ),
-      drawer: NavigationDrawer(children: [
-      ]),
+      drawer: const NavigationDrawer(children: []),
       body: Column(
         children: [
           Container(
@@ -23,20 +22,34 @@ class Profile_Ui_2 extends StatelessWidget {
           child: Stack(
             children: [
               Image.asset("assets/icons/img_8.png"),
-              Positioned(top: 140,left: 110,
-                child: CircleAvatar(backgroundImage: AssetImage("assets/icons/img_7.png"),radius: 80,),),
-              Positioned(top: 190,left: 10,
+              const Positioned(top: 140,left: 110,
+                child: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 80,
+                  child: CircleAvatar(
+                    radius: 77,
+                    backgroundImage: AssetImage("assets/icons/img_7.png"),
+                  ),),),
+               const Positioned(top: 190,left: 10,
                 child: CircleAvatar(
                   radius: 30,
-                  backgroundColor: Colors.deepOrange,
-                  child: Icon(Icons.message),
+                  backgroundColor: Colors.white,
+                  child: CircleAvatar(
+                    radius: 27,
+                    backgroundColor: Colors.deepOrange,
+                    child: Icon(Icons.message),
+                  ),
                 ),
               ),
-              Positioned(top: 190,right: 10,
+              const Positioned(top: 190,right: 10,
                 child: CircleAvatar(
                   radius: 30,
-                  backgroundColor: Colors.blue,
-                  child: Icon(Icons.add),
+                  backgroundColor: Colors.white,
+                  child: CircleAvatar(
+                    radius: 27,
+                    backgroundColor: Colors.blue,
+                    child: Icon(Icons.add),
+                  ),
                 ),
               ),
             ],
@@ -45,10 +58,10 @@ class Profile_Ui_2 extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(30.0),
             child: Column(
-              children: [
+              children: const [
                 Text("David Beckham",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: EdgeInsets.all(20.0),
                   child: Text("Model / superstar",style: TextStyle(color: Colors.lightBlue),),
                 )
               ],
