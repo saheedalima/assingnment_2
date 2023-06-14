@@ -24,7 +24,7 @@ var images_2=["assets/icons/img_39.png","assets/icons/img_40.png","assets/icons/
         slivers: [
           SliverAppBar(
             backgroundColor: Colors.black,
-            title: Center(child: Text("Playlists",style: TextStyle(
+            title: const Center(child: Text("Playlists",style: TextStyle(
                 color: Colors.purpleAccent,
               fontSize: 30,
               fontWeight: FontWeight.bold,
@@ -34,7 +34,6 @@ var images_2=["assets/icons/img_39.png","assets/icons/img_40.png","assets/icons/
               backgroundColor: Colors.black,
               title:  Center(
                 child: Container(
-
                   width: 350,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
@@ -44,7 +43,9 @@ var images_2=["assets/icons/img_39.png","assets/icons/img_40.png","assets/icons/
                     padding: const EdgeInsets.all(10.0),
                     child: TextField(
                       decoration: InputDecoration(
-                        labelStyle: TextStyle(
+                        filled: true,
+                        fillColor: Colors.purpleAccent[200],
+                        labelStyle: const TextStyle(
                           color: Colors.purpleAccent
                         ),
                         hintText: "search..",hintStyle: TextStyle(color: Colors.purpleAccent[200]),
@@ -61,7 +62,7 @@ var images_2=["assets/icons/img_39.png","assets/icons/img_40.png","assets/icons/
                 GridView.builder(
                   shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                     mainAxisSpacing: 7,
                     crossAxisSpacing: 7),
