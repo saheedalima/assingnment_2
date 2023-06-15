@@ -49,8 +49,8 @@ class Farmers_Freshzone extends StatelessWidget {
             title: const Text("Farmers Fresh Zone"),
             backgroundColor: Colors.green,
             actions: [
-              Row(
-                children: const [
+              const Row(
+                children: [
                   Icon(Icons.directions),
                   Text("Kochi"),
                   Icon(Icons.arrow_downward),
@@ -82,7 +82,7 @@ class Farmers_Freshzone extends StatelessWidget {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.greenAccent[100],
-                            shape: StadiumBorder()
+                            shape: const StadiumBorder()
                         ),
                         onPressed: () {},
                         child: const Text("Vegetables",style: TextStyle(color: Colors.green),),
@@ -93,7 +93,7 @@ class Farmers_Freshzone extends StatelessWidget {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.greenAccent[100],
-                            shape: StadiumBorder()
+                            shape: const StadiumBorder()
                         ),
                         onPressed: () {},
                         child: const Text("Fruits",style: TextStyle(color: Colors.green),),
@@ -104,7 +104,7 @@ class Farmers_Freshzone extends StatelessWidget {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.greenAccent[100],
-                            shape: StadiumBorder()
+                            shape: const StadiumBorder()
                         ),
                         onPressed: () {},
                         child: const Text("Exotic",style: TextStyle(color: Colors.green),),
@@ -115,7 +115,7 @@ class Farmers_Freshzone extends StatelessWidget {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.greenAccent[100],
-                          shape: StadiumBorder()
+                          shape: const StadiumBorder()
                         ),
                         onPressed: () {},
                         child: const Text("Fresh Cuts",style: TextStyle(color: Colors.green),),
@@ -126,7 +126,7 @@ class Farmers_Freshzone extends StatelessWidget {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.greenAccent[100],
-                            shape: StadiumBorder()
+                            shape: const StadiumBorder()
                         ),
                         onPressed: () {},
                         child: const Text("Vegetables",style: TextStyle(color: Colors.green),),
@@ -137,7 +137,7 @@ class Farmers_Freshzone extends StatelessWidget {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.greenAccent[100],
-                            shape: StadiumBorder()
+                            shape: const StadiumBorder()
                         ),
                         onPressed: () {},
                         child: const Text("Fruits",style: TextStyle(color: Colors.green),),
@@ -208,14 +208,14 @@ class Farmers_Freshzone extends StatelessWidget {
                 padding: const EdgeInsets.all(17.0),
                 child: Container(
                   height: 70,
-                  child: Card(
+                  child: const Card(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 10),
+                      padding: EdgeInsets.only(top: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Column(
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.timer,
                                 size: 30,
@@ -224,11 +224,11 @@ class Farmers_Freshzone extends StatelessWidget {
                               Text("30 min policy"),
                             ],
                           ),
-                          const SizedBox(
+                          SizedBox(
                             width: 20,
                           ),
                           Column(
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.phone,
                                 size: 30,
@@ -237,11 +237,11 @@ class Farmers_Freshzone extends StatelessWidget {
                               Text("Tracability"),
                             ],
                           ),
-                          const SizedBox(
+                          SizedBox(
                             width: 20,
                           ),
                           Column(
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.man,
                                 size: 30,
@@ -271,7 +271,7 @@ class Farmers_Freshzone extends StatelessWidget {
               GridView.builder(
                 padding:EdgeInsets.zero,
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3,
                   mainAxisSpacing: 5,
@@ -424,8 +424,8 @@ class Farmers_Freshzone extends StatelessWidget {
                                     Wrap(
                                       children: [
                                         Text(texts_4[index],textAlign: TextAlign.start,),
-                                        SizedBox(width: 60),
-                                        ElevatedButton(onPressed: (){}, child: Text("Add"),)
+                                        const SizedBox(width: 60),
+                                        ElevatedButton(onPressed: (){}, child: const Text("Add"),)
                                       ],
                                     )
                                   ],
@@ -443,10 +443,10 @@ class Farmers_Freshzone extends StatelessWidget {
                       Container(
                         width: 200,
                          height: 100,
-                         child: Column(
+                         child: const Column(
                            mainAxisAlignment: MainAxisAlignment.start,
                            children: [
-                             const ReadMoreText("we are looking towards safe food- which are nutri-Locked and hygienic as well",
+                             ReadMoreText("we are looking towards safe food- which are nutri-Locked and hygienic as well",
                                trimLines: 2,
                                   colorClickableText: Colors.pink,
                                   trimMode: TrimMode.Line,
@@ -455,9 +455,9 @@ class Farmers_Freshzone extends StatelessWidget {
                                  // softWrap: true,
                              ),
                              Padding(
-                               padding: const EdgeInsets.only(top: 10,right: 20),
+                               padding: EdgeInsets.only(top: 10,right: 20),
                                child: Wrap(
-                                 children: const [
+                                 children: [
                                    Text("READ MORE ",style: TextStyle(
                                        fontWeight: FontWeight.bold,
                                      fontSize: 20,
@@ -480,8 +480,8 @@ class Farmers_Freshzone extends StatelessWidget {
               Container(
                 height: 30,
                 width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 5),
+                child: const Padding(
+                  padding: EdgeInsets.only(left: 5),
                   child: Text("Our Blog Posts",style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -511,7 +511,7 @@ class Farmers_Freshzone extends StatelessWidget {
                                 child: Wrap(
                                   children: [
                                     Text(listtexts_2[index]),
-                                    Icon(Icons.arrow_right)
+                                    const Icon(Icons.arrow_right)
                                   ],
                                 ),
                               )
@@ -572,7 +572,7 @@ class Farmers_Freshzone extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text("Market places",style: TextStyle(fontSize: 5),),
+                        const Text("Market places",style: TextStyle(fontSize: 5),),
                         const Padding(
                           padding: EdgeInsets.all(20.0),
                           child: Text("Your \n story",style: TextStyle(fontSize: 5),),
@@ -590,16 +590,16 @@ class Farmers_Freshzone extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  child: Column(
+                  child: const Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
+                        padding: EdgeInsets.only(bottom: 10),
                         child: Text("Get To Know Us",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                       ),
                       Wrap(
-                        children: const [
+                        children: [
                           Text("About Us",style: TextStyle(fontSize: 10),),
                           Padding(
                             padding: EdgeInsets.only(left: 15,right: 15),
@@ -615,18 +615,18 @@ class Farmers_Freshzone extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  child: Column(
+                  child: const Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.only(bottom: 15),
                         child: Text("Useful Links",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                       ),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: const [
+                        children: [
                           Text("Privacy Policy",style: TextStyle(fontSize: 10),),
                           Text("|",style: TextStyle(fontSize: 10),),
                           Text("Return & refund policy",style: TextStyle(fontSize: 10),),
@@ -641,9 +641,9 @@ class Farmers_Freshzone extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 15,left: 40,right: 40,bottom: 15),
                 child: Container(
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: const [
+                    children: [
                       Icon(Icons.message,size: 25,),
                       Icon(Icons.facebook,size: 25,),
                       Icon(Icons.linked_camera,size: 25,),
@@ -655,11 +655,11 @@ class Farmers_Freshzone extends StatelessWidget {
               Container(
                 height: 70,
                 color: Colors.green,
-                child: Center(
+                child: const Center(
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 20),
+                    padding: EdgeInsets.only(top: 20),
                     child: Column(
-                      children: const [
+                      children: [
                         Text("Cpyright @ 2021 Farmers Fresh Zone.",style: TextStyle(fontSize: 10,color: Colors.white),),
                         Text("All Highlights Reserved, V.2.40.22",style: TextStyle(fontSize: 10,color: Colors.white),),
                       ],
